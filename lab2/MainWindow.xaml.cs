@@ -77,10 +77,10 @@ namespace lab2
                         Bar.Text = "информация";
                         break;
                     case "4":
-                        Bar.Text = "меняет фон";
+                        Bar.Text = "меняет цвет кисти";
                         break;
                     case "5":
-                        Bar.Text = "информация";
+                        Bar.Text = "Удаление нарисованного";
                         break;
                     
                 }
@@ -117,6 +117,11 @@ namespace lab2
                 Paint.DefaultDrawingAttributes.Color = Colors.Blue;
 
             }
+        }
+
+        private void DeleteMenuItem(object sender, RoutedEventArgs e)
+        {
+            this.Paint.Strokes.Clear();
         }
     }
 }

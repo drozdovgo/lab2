@@ -27,7 +27,7 @@
                 <MenuItem Header="_Закрыть" Name="GOVExit" Click="Exit" Tag="2" MouseEnter="MouseEnter_grid" />
             </MenuItem>
             <MenuItem Header="_Редактор" >
-                <MenuItem Header="_Сменить цвет" Name="Color" MouseEnter="MouseEnter_grid">
+                <MenuItem Header="_Сменить цвет" Name="Color" MouseEnter="MouseEnter_grid" Tag="4">
                     <ComboBox SelectedIndex="1" SelectionChanged="ComboBox_SelectionChanged">
                         <ComboBoxItem Content="Красный" />
                         <ComboBoxItem Content="Чёрный"/>
@@ -35,11 +35,22 @@
                         <ComboBoxItem Content="Синий"/>
                     </ComboBox>
                 </MenuItem>
+                <MenuItem Header="Удаление" Click="DeleteMenuItem" MouseEnter="MouseEnter_grid" Tag="5"/>
             </MenuItem>
 
         </Menu>
 
-<!--Строка состояния, ВЕРНУТЬСЯ-->
+        <ToolBar Grid.Row="2" Margin="10,0,10,10">
+            <Button Height="30" Width="60" Click="MenueItem" Tag="1" MouseEnter="MouseEnter_grid">
+                <Image Source ="\\iscsi\profstud\drozdovgo\Downloads\kist.jpg"></Image>
+            </Button>
+                <Separator/>
+            <Button Height="40" Width="60" Click="Inf" Tag="3" MouseEnter="MouseEnter_grid">
+                <Image Source="\\iscsi\profstud\drozdovgo\Downloads\inf.jpg"></Image>
+            </Button>
+        </ToolBar>
+
+        <!--Строка состояния, ВЕРНУТЬСЯ-->
         <StatusBar DockPanel.Dock="Bottom" Grid.Row="3" Background="LightGray">
             <TextBlock x:Name="Bar" />
         </StatusBar>
